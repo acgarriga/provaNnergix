@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container col-12">
+  <div class="titol col-12 text-center">
+    <h1> Web Crawler Analizer (Resumen)</h1>
+  </div>
+  <ul>
+    {% for element in urls %}
+    <li>{{ element }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{{ path('index_URLs') }}"><div class="btn btn-warning"/>Volver</div></a>
+</div>
+{% endblock %}

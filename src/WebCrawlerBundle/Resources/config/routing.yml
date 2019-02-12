@@ -1,0 +1,3 @@
+index_URLs:
+    path:     /
+    defaults: { _controller: WebCrawlerBundle:URLs:index }

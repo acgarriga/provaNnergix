@@ -1,0 +1,7 @@
+web_crawler:
+    resource: "@WebCrawlerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

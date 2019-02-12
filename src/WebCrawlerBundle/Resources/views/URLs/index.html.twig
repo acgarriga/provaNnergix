@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% form_theme formulari 'bootstrap_4_horizontal_layout.html.twig' %}
+{% block body %}
+<div class="container col-12">
+  <div class="titol col-12 text-center">
+    <h1> Web Crawler Analizer </h1>
+  </div>
+  <div class="blocCentral col-12 text-center">
+  {{ form_start(formulari) }}
+    <div class="form-group text-left">
+      {{ form_row(formulari.url, {label: 'Introduce la URL',attr : {placeholder:'URL'}}) }}
+    </div>
+    <div class="form-group text-left">
+      {{ form_row(formulari.profunditat, {label: 'Profundidad',attr: {class: 'col-xs-12 col-sm-12 col-md-2 col-lg-1 col-xl-1',min:1,max:10,value:1}}) }}
+    </div>
+    <div class="form-group text-left">
+    {{ form_row(formulari.headers, {label: 'Selecciona', label_attr: {class: 'checkbox-custom-inline'}}) }}
+    </div>
+    <div class="form-group">
+      {{ form_row(formulari.analitza, {attr: {class:'btn btn-primary'}}) }}
+    </div>
+  {{ form_end(formulari) }}
+  </div>
+</div>
+{% endblock %}
